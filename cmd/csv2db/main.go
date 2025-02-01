@@ -17,7 +17,7 @@ func main() {
 	tableName := os.Args[2]
 	csvFilePath := os.Args[3]
 
-	err := csv2sqlite.ConvertCSVToDB(dbName, tableName, csvFilePath)
+	err := csv2sqlite.Convert(dbName, tableName, csvFilePath)
 	if err != nil {
 		fmt.Println("Error:", err)
 	} else {

@@ -6,7 +6,7 @@ A simple Go project to convert CSV files into SQLite databases.
 
 To install the CLI tool, use the following command:
 
-```
+```sh
 go install github.com/ayushkr12/csv2db/cmd/csv2db@latest
 ```
 
@@ -28,7 +28,7 @@ import (
 )
 
 func main() {
-    err := csv2sqlite.ConvertCSVToDB("mydb.db", "users", "data.csv")
+    err := csv2sqlite.Convert("mydb.db", "users", "data.csv")
     if err != nil {
         fmt.Println("Error:", err)
     } else {
@@ -41,17 +41,19 @@ func main() {
 
 To use it from the command line:
 
-```
+```sh
 csv2db <db_name> <table_name> <csv_file>
 ```
 
 Where:
+
 - `<db_name>`: Name of the SQLite database.
 - `<table_name>`: Name of the table in the SQLite database.
 - `<csv_file>`: Path to the CSV file to be converted.
 
 Example:
-```
+
+```sh
 csv2db mydb.db users data.csv
 ```
 
