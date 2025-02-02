@@ -29,7 +29,7 @@ func inferDataType(value string) string {
 }
 
 // Function to convert csv to sqlite3 database
-func Convert(dbName string, tableName string, csvFilePath string) error {
+func Convert(outputDBPath string, tableName string, csvFilePath string) error {
 	// Open the CSV file
 	file, err := os.Open(csvFilePath)
 	if err != nil {
@@ -57,7 +57,7 @@ func Convert(dbName string, tableName string, csvFilePath string) error {
 	}
 
 	// Open the database
-	db, err := sql.Open("sqlite3", dbName)
+	db, err := sql.Open("sqlite3", outputDBPath)
 	if err != nil {
 		return fmt.Errorf("error opening database: %v", err)
 	}

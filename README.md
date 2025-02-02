@@ -42,12 +42,12 @@ func main() {
 To use it from the command line:
 
 ```sh
-csv2db <db_name> <table_name> <csv_file>
+csv2db <output_db_path> <table_name> <csv_file>
 ```
 
 Where:
 
-- `<db_name>`: Name of the SQLite database.
+- `<output_db_path>`: Path to the output sqlite database.
 - `<table_name>`: Name of the table in the SQLite database.
 - `<csv_file>`: Path to the CSV file to be converted.
 
