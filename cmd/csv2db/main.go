@@ -9,7 +9,7 @@ import (
 
 func main() {
 	if len(os.Args) < 4 {
-		fmt.Println("Usage: csv2db <db_name> <table_name> <csv_file>")
+		fmt.Println("Usage: csv2db <output_db_path> <table_name> <csv_file>")
 		return
 	}
 
